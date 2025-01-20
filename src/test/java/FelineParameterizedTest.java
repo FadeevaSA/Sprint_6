@@ -7,27 +7,25 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class FelineParameterizedTest {
-    private final int actualNumberOfKittens;
-    private final int expectedNumberOfKittens;
+    private final int numberOfKittens;
 
+    public FelineParameterizedTest(int numberOfKittens) {
+        this.numberOfKittens = numberOfKittens;
 
-    public FelineParameterizedTest(int expectedNumberOfKittens, int actualNumberOfKittens) {
-        this.expectedNumberOfKittens = expectedNumberOfKittens;
-        this.actualNumberOfKittens = actualNumberOfKittens;
     }
 
-    @Parameterized.Parameters
-    public static Object[][] NumberOfKittens() {
+    @Parameterized.Parameters(name = "Тестовые данные: {0}")
+    public static Object[][] testNumberOfKittens() {
         return new Object[][]{
-                {1, 1},
-                {0, 0},
-                {7, 7},
+                {1},
+                {0},
+                {7},
         };
     }
 
     @Test
     public void getKittensNullOrMore() {
         Feline feline = new Feline();
-        assertEquals(expectedNumberOfKittens, feline.getKittens(actualNumberOfKittens));
+        assertEquals(numberOfKittens, feline.getKittens(numberOfKittens));
     }
 }

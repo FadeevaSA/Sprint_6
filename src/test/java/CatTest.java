@@ -6,14 +6,13 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import java.util.Arrays;
 import java.util.List;
 
+import static com.example.Constant.PREDATOR_FOOD_LIST;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CatTest {
-    public static final List<String> PREDATOR_FOOD_LIST = Arrays.asList("Животные", "Птицы", "Рыба");
 
     @Mock
     Feline feline;

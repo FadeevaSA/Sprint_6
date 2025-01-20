@@ -9,6 +9,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
 
+import static com.example.Constant.PREDATOR_FOOD_LIST;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
@@ -42,9 +43,9 @@ public class LionTest {
     @Test
     public void getFoodReturnPredatorFoodList() throws Exception {
         Lion lion = new Lion("Самец", feline);
-        Mockito.when(feline.getFood("Хищник")).thenReturn(CatTest.PREDATOR_FOOD_LIST);
+        Mockito.when(feline.getFood("Хищник")).thenReturn(PREDATOR_FOOD_LIST);
         List<String> actualLionFoodList = lion.getFood();
-        Assert.assertEquals(CatTest.PREDATOR_FOOD_LIST, actualLionFoodList);
+        Assert.assertEquals(PREDATOR_FOOD_LIST, actualLionFoodList);
 
     }
 }

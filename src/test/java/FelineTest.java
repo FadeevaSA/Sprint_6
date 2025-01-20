@@ -3,6 +3,7 @@ import org.junit.Test;
 
 import java.util.List;
 
+import static com.example.Constant.PREDATOR_FOOD_LIST;
 import static org.junit.Assert.assertEquals;
 
 public class FelineTest {
@@ -11,7 +12,7 @@ public class FelineTest {
     public void eatMeatReturnPredatorFoodList() throws Exception {
         Feline feline = new Feline();
         List<String> actualPredatorFoodList = feline.eatMeat();
-        assertEquals(CatTest.PREDATOR_FOOD_LIST, actualPredatorFoodList);
+        assertEquals(PREDATOR_FOOD_LIST, actualPredatorFoodList);
 
     }
 

@@ -18,7 +18,7 @@ public class LionParameterizedTest {
         this.feline = new Feline();
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters (name = "Тип животного: {0}")
     public static Object[][] sexType() {
         return new Object[][]{
                 {"Самка", false},
